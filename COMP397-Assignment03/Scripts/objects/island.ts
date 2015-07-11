@@ -1,13 +1,13 @@
 ﻿module objects {
     // Island Class ++++++++++++++++++++++++++++++++++++++
-    export class Ball extends objects.GameObject {
+    export class Island extends objects.GameObject {
         // CONSTRUCTOR ++++++++++++++++++++++++++++++++++
         constructor(imageString: string) {
             super(imageString);
 
-            this.name = "ball";
+            this.name = "island";
             this.sound = "yay";
-            this.dy = 5;
+            this.dx = 5;
 
             this.reset();
         }
@@ -16,23 +16,23 @@
         private checkBounds(): void {
 
             // check if island has left screen
-            if (this.y > 480 + this.height) {
+            if (this.x > 800 + this.width) {
                 this.reset();
             }
         }
 
 
         private reset(): void {
-            this.x = Math.floor(Math.random() * 640); // start island at random location
-            this.y = -this.height; // start island off stage
+            this.y = Math.floor(Math.random() * 540); // start island at random location
+            this.x = -this.width; // start island off stage
         }
 
 
         // PUBLIC METHODS +++++++++++++++++++++++++++++++
         public update(): void {
 
-            this.y += this.dy; // moves island down the stage
+            this.x += this.dx; // moves island down the stage
             this.checkBounds();
         }
     }
-}  
+} 

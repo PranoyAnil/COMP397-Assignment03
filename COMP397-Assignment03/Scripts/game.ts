@@ -4,20 +4,20 @@
 /// <reference path="typings/soundjs/soundjs.d.ts" />
 /// <reference path="typings/preloadjs/preloadjs.d.ts" />
 
-/// <reference path="../utility/utility.ts" />
+
+/// <reference path="utility/utility.ts" />
 
 /// <reference path="objects/gameobject.ts" />
-
-/// <reference path="objects/field.ts" />
-/// <reference path="objects/player.ts" />
-/// <reference path="objects/ball.ts" />
-/// <reference path="objects/enemy.ts" />
-
+/// <reference path="objects/ocean.ts" />
+/// <reference path="objects/plane.ts" />
+/// <reference path="objects/island.ts" />
+/// <reference path="objects/cloud.ts" />
 
 /// <reference path="objects/scoreboard.ts" />
 
 
-/// <reference path="../manager/collision.ts" />
+
+/// <reference path="managers/collision.ts" />
 
 
 // Game Framework Variables
@@ -27,10 +27,10 @@ var stats: Stats;
 
 var assets: createjs.LoadQueue;
 var manifest = [
-    { id: "field", src: "assets/images/field.gif" },
-    { id: "player", src: "assets/images/player.png" },
-    { id: "ball", src: "assets/images/ball.png" },
-    { id: "opp", src: "assets/images/opp.png" },
+    { id: "ocean", src: "assets/images/field.gif" },
+    { id: "plane", src: "assets/images/player.png" },
+    { id: "island", src: "assets/images/ball.png" },
+    { id: "cloud", src: "assets/images/opp.png" },
     { id: "yay", src: "assets/audio/yay.ogg" },
     { id: "thunder", src: "assets/audio/thunder.ogg" },
     { id: "engine", src: "assets/audio/engine.ogg" }
@@ -38,10 +38,10 @@ var manifest = [
 
 
 // Game Variables
-var field: objects.Field;
-var player: objects.Player;
-var ball: objects.Ball;
-var enemies: objects.Enemy[] = [];
+var ocean: objects.Ocean;
+var plane: objects.Plane;
+var island: objects.Island;
+var clouds: objects.Cloud[] = [];
 
 var scoreboard: objects.ScoreBoard;
 
@@ -90,16 +90,16 @@ function setupStats() {
 function gameLoop() {
     stats.begin(); // Begin measuring
 
-    field.update();
-    player.update();
-    ball.update();
+    ocean.update();
+    plane.update();
+    island.update();
 
-    for (var enemy = 0; enemy < 3; enemy++) {
-        enemies[enemy].update();
-        collision.check(enemies[enemy]);
+    for (var cloud = 0; cloud < 3; cloud++) {
+        clouds[cloud].update();
+        collision.check(clouds[cloud]);
     }
 
-    collision.check(ball);
+    collision.check(island);
 
     scoreboard.update();
 
@@ -112,21 +112,21 @@ function gameLoop() {
 // Our Main Game Function
 function main() {
     //add ocean object to stage
-    field = new objects.Field(assets.getResult("field"));
-    stage.addChild(field);
+    ocean = new objects.Ocean(assets.getResult("ocean"));
+    stage.addChild(ocean);
 
     //add island object to stage
-    ball = new objects.Ball(assets.getResult("ball"));
-    stage.addChild(ball);
+    island = new objects.Island(assets.getResult("island"));
+    stage.addChild(island);
 
     // add plane object to stage
-    player = new objects.Player(assets.getResult("player"));
-    stage.addChild(player);
+    plane = new objects.Plane(assets.getResult("plane"));
+    stage.addChild(plane);
 
     // add 3 cloud objects to stage
-    for (var enemy = 0; enemy < 3; enemy++) {
-        enemies[enemy] = new objects.Enemy(assets.getResult("enemy"));
-        stage.addChild(enemies[enemy]);
+    for (var cloud = 0; cloud < 3; cloud++) {
+        clouds[cloud] = new objects.Cloud(assets.getResult("cloud"));
+        stage.addChild(clouds[cloud]);
     }
 
 

@@ -64,7 +64,7 @@
     <Content Include="assets\images\opp.png" />
     <Content Include="assets\images\player.png" />
     <Content Include="packages.config" />
-    <Content Include="utility\utility.js.map" />
+    <Content Include="Scripts\utility\utility.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -81,7 +81,7 @@
     <Content Include="Scripts\lib\soundjs-0.6.0.min.js" />
     <Content Include="Scripts\lib\Stats.js" />
     <Content Include="Scripts\lib\tweenjs-0.6.0.min.js" />
-    <Content Include="utility\utility.js" />
+    <Content Include="Scripts\utility\utility.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -91,13 +91,13 @@
     <Folder Include="assets\fonts\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="manager\collision.ts" />
+    <TypeScriptCompile Include="Scripts\managers\collision.ts" />
     <TypeScriptCompile Include="Scripts\game.ts" />
-    <TypeScriptCompile Include="Scripts\objects\ball.ts" />
-    <TypeScriptCompile Include="Scripts\objects\enemy.ts" />
-    <TypeScriptCompile Include="Scripts\objects\field.ts" />
+    <TypeScriptCompile Include="Scripts\objects\island.ts" />
+    <TypeScriptCompile Include="Scripts\objects\cloud.ts" />
+    <TypeScriptCompile Include="Scripts\objects\ocean.ts" />
     <TypeScriptCompile Include="Scripts\objects\gameobject.ts" />
-    <TypeScriptCompile Include="Scripts\objects\player.ts" />
+    <TypeScriptCompile Include="Scripts\objects\plane.ts" />
     <TypeScriptCompile Include="Scripts\objects\scoreboard.ts" />
     <TypeScriptCompile Include="Scripts\typings\createjs-lib\createjs-lib.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\easeljs\easeljs.d.ts" />
@@ -105,7 +105,7 @@
     <TypeScriptCompile Include="Scripts\typings\soundjs\soundjs.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\stats\stats.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\tweenjs\tweenjs.d.ts" />
-    <TypeScriptCompile Include="utility\utility.ts" />
+    <TypeScriptCompile Include="Scripts\utility\utility.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

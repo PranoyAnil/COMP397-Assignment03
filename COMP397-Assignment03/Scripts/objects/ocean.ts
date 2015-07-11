@@ -1,10 +1,10 @@
 ﻿module objects {
     // Ocean Class ++++++++++++++++++++++++++++++++++++++
-    export class Field extends createjs.Bitmap {
+    export class Ocean extends createjs.Bitmap {
         // PUBLIC PROPERTIES ++++++++++++++++++++++++++++
         width: number;
         height: number;
-        dy: number = 5;
+        dx: number = 5;
 
         // CONSTRUCTOR ++++++++++++++++++++++++++++++++++
         constructor(imageString: string) {
@@ -19,23 +19,25 @@
         private checkBounds(): void {
 
             // check if ocean has left screen
-            if (this.y == 0) {
+            if (this.x == -540) {
                 this.reset();
             }
         }
 
 
         private reset(): void {
-            this.x = 0;
-            this.y = -960; // reset ocean off screen
+            this.y = 0;
+            //this.y = -960; // reset ocean off screen
+            this.x = 180;
         }
 
 
         // PUBLIC METHODS +++++++++++++++++++++++++++++++
         public update(): void {
 
-            this.y += this.dy; // moves Ocean down the stage
+            //this.y += this.dy; // moves Ocean down the stage
+            this.x -= this.dx;
             this.checkBounds();
         }
     }
-}   
+}  
