@@ -33,7 +33,7 @@ var manifest = [
     { id: "cloud", src: "assets/images/opp.png" },
     { id: "yay", src: "assets/audio/win.ogg" },
     { id: "thunder", src: "assets/audio/hit.ogg" },
-    { id: "engine", src: "assets/audio/engine.ogg" }
+    { id: "engine", src: "assets/audio/run.ogg" }
 ];
 
 

@@ -68,6 +68,7 @@
     <Content Include="Scripts\utility\utility.js.map" />
     <Content Include="assets\audio\hit.ogg" />
     <Content Include="assets\audio\win.ogg" />
+    <Content Include="assets\audio\run.ogg" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
