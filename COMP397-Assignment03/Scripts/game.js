@@ -17,12 +17,12 @@ var stage;
 var stats;
 var assets;
 var manifest = [
-    { id: "ocean", src: "assets/images/field.gif" },
+    { id: "ocean", src: "assets/images/football.gif" },
     { id: "plane", src: "assets/images/player.png" },
     { id: "island", src: "assets/images/ball.png" },
     { id: "cloud", src: "assets/images/opp.png" },
-    { id: "yay", src: "assets/audio/yay.ogg" },
-    { id: "thunder", src: "assets/audio/thunder.ogg" },
+    { id: "yay", src: "assets/audio/win.ogg" },
+    { id: "thunder", src: "assets/audio/hit.ogg" },
     { id: "engine", src: "assets/audio/engine.ogg" }
 ];
 // Game Variables

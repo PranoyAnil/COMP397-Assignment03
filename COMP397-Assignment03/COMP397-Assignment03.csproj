@@ -61,10 +61,13 @@
   <ItemGroup>
     <Content Include="assets\images\ball.png" />
     <Content Include="assets\images\field.gif" />
+    <Content Include="assets\images\football.gif" />
     <Content Include="assets\images\opp.png" />
     <Content Include="assets\images\player.png" />
     <Content Include="packages.config" />
     <Content Include="Scripts\utility\utility.js.map" />
+    <Content Include="assets\audio\hit.ogg" />
+    <Content Include="assets\audio\win.ogg" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
