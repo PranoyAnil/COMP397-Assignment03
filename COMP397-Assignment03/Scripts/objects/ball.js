@@ -6,35 +6,35 @@ var __extends = this.__extends || function (d, b) {
 };
 var objects;
 (function (objects) {
-    // Island Class ++++++++++++++++++++++++++++++++++++++
-    var Island = (function (_super) {
-        __extends(Island, _super);
+    // Ball Class ++++++++++++++++++++++++++++++++++++++
+    var Ball = (function (_super) {
+        __extends(Ball, _super);
         // CONSTRUCTOR ++++++++++++++++++++++++++++++++++
-        function Island(imageString) {
+        function Ball(imageString) {
             _super.call(this, imageString);
-            this.name = "island";
+            this.name = "ball";
             this.sound = "yay";
             this.dx = 5;
             this.reset();
         }
         // PRIVATE METHODS ++++++++++++++++++++++++++++++
-        Island.prototype.checkBounds = function () {
-            // check if island has left screen
+        Ball.prototype.checkBounds = function () {
+            // check if ball has left screen
             if (this.x > 800 + this.width) {
                 this.reset();
             }
         };
-        Island.prototype.reset = function () {
-            this.y = Math.floor(Math.random() * 540); // start island at random location
-            this.x = -this.width; // start island off stage
+        Ball.prototype.reset = function () {
+            this.y = Math.floor(Math.random() * 540); // start ball at random location
+            this.x = -this.width; // start ball off stage
         };
         // PUBLIC METHODS +++++++++++++++++++++++++++++++
-        Island.prototype.update = function () {
-            this.x += this.dx; // moves island down the stage
+        Ball.prototype.update = function () {
+            this.x += this.dx; // moves ball down the stage
             this.checkBounds();
         };
-        return Island;
+        return Ball;
     })(objects.GameObject);
-    objects.Island = Island;
+    objects.Ball = Ball;
 })(objects || (objects = {}));
 //# sourceMappingURL=ball.js.map

@@ -6,11 +6,11 @@ var __extends = this.__extends || function (d, b) {
 };
 var objects;
 (function (objects) {
-    // Ocean Class ++++++++++++++++++++++++++++++++++++++
-    var Ocean = (function (_super) {
-        __extends(Ocean, _super);
+    // Field Class ++++++++++++++++++++++++++++++++++++++
+    var Field = (function (_super) {
+        __extends(Field, _super);
         // CONSTRUCTOR ++++++++++++++++++++++++++++++++++
-        function Ocean(imageString) {
+        function Field(imageString) {
             _super.call(this, imageString);
             this.dx = 5;
             this.width = this.getBounds().width;
@@ -18,25 +18,23 @@ var objects;
             this.reset();
         }
         // PRIVATE METHODS ++++++++++++++++++++++++++++++
-        Ocean.prototype.checkBounds = function () {
-            // check if ocean has left screen
+        Field.prototype.checkBounds = function () {
+            // check if field has left screen
             if (this.x == -540) {
                 this.reset();
             }
         };
-        Ocean.prototype.reset = function () {
+        Field.prototype.reset = function () {
             this.y = 0;
-            //this.y = -960; // reset ocean off screen
-            this.x = 180;
+            this.x = 10;
         };
         // PUBLIC METHODS +++++++++++++++++++++++++++++++
-        Ocean.prototype.update = function () {
-            //this.y += this.dy; // moves Ocean down the stage
-            this.x -= this.dx;
+        Field.prototype.update = function () {
+            this.x -= this.dx; // moves field across the stage
             this.checkBounds();
         };
-        return Ocean;
+        return Field;
     })(createjs.Bitmap);
-    objects.Ocean = Ocean;
+    objects.Field = Field;
 })(objects || (objects = {}));
 //# sourceMappingURL=field.js.map

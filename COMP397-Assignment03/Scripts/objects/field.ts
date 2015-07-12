@@ -1,6 +1,6 @@
 ﻿module objects {
-    // Ocean Class ++++++++++++++++++++++++++++++++++++++
-    export class Ocean extends createjs.Bitmap {
+    // Field Class ++++++++++++++++++++++++++++++++++++++
+    export class Field extends createjs.Bitmap {
         // PUBLIC PROPERTIES ++++++++++++++++++++++++++++
         width: number;
         height: number;
@@ -18,7 +18,7 @@
         // PRIVATE METHODS ++++++++++++++++++++++++++++++
         private checkBounds(): void {
 
-            // check if ocean has left screen
+            // check if field has left screen
             if (this.x == -540) {
                 this.reset();
             }
@@ -27,7 +27,6 @@
 
         private reset(): void {
             this.y = 0;
-            //this.y = -960; // reset ocean off screen
             this.x = 10;
         }
 
@@ -35,8 +34,8 @@
         // PUBLIC METHODS +++++++++++++++++++++++++++++++
         public update(): void {
 
-            //this.y += this.dy; // moves Ocean down the stage
-            this.x -= this.dx;
+             
+            this.x -= this.dx;// moves field across the stage
             this.checkBounds();
         }
     }

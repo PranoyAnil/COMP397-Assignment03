@@ -6,11 +6,11 @@ var __extends = this.__extends || function (d, b) {
 };
 var objects;
 (function (objects) {
-    // Plane Class ++++++++++++++++++++++++++++++++++++++
-    var Plane = (function (_super) {
-        __extends(Plane, _super);
+    // Player Class ++++++++++++++++++++++++++++++++++++++
+    var Player = (function (_super) {
+        __extends(Player, _super);
         // CONSTRUCTOR ++++++++++++++++++++++++++++++++++
-        function Plane(imageString) {
+        function Player(imageString) {
             _super.call(this, imageString);
             this.sound = "engine";
             //this.x = 30;
@@ -18,11 +18,11 @@ var objects;
             createjs.Sound.play(this.sound, { "loop": -1 });
         }
         // PUBLIC METHODS +++++++++++++++++++++++++++++++
-        Plane.prototype.update = function () {
-            this.y = stage.mouseY; // position plane under mouse
+        Player.prototype.update = function () {
+            this.y = stage.mouseY; // position player along mouse
         };
-        return Plane;
+        return Player;
     })(objects.GameObject);
-    objects.Plane = Plane;
+    objects.Player = Player;
 })(objects || (objects = {}));
 //# sourceMappingURL=player.js.map

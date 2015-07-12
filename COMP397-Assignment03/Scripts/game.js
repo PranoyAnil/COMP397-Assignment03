@@ -5,9 +5,9 @@
 /// <reference path="typings/preloadjs/preloadjs.d.ts" />
 /// <reference path="utility/utility.ts" />
 /// <reference path="objects/gameobject.ts" />
-/// <reference path="objects/ocean.ts" />
-/// <reference path="objects/plane.ts" />
-/// <reference path="objects/island.ts" />
+/// <reference path="objects/field.ts" />
+/// <reference path="objects/player.ts" />
+/// <reference path="objects/ball.ts" />
 /// <reference path="objects/cloud.ts" />
 /// <reference path="objects/scoreboard.ts" />
 /// <reference path="managers/collision.ts" />
@@ -17,18 +17,18 @@ var stage;
 var stats;
 var assets;
 var manifest = [
-    { id: "ocean", src: "assets/images/football.gif" },
-    { id: "plane", src: "assets/images/player.png" },
-    { id: "island", src: "assets/images/ball.png" },
+    { id: "field", src: "assets/images/football.gif" },
+    { id: "player", src: "assets/images/player.png" },
+    { id: "ball", src: "assets/images/ball.png" },
     { id: "cloud", src: "assets/images/opp.png" },
     { id: "yay", src: "assets/audio/ovation.ogg" },
     { id: "thunder", src: "assets/audio/whistle.ogg" },
     { id: "engine", src: "assets/audio/chant.ogg" }
 ];
 // Game Variables
-var ocean;
-var plane;
-var island;
+var field;
+var player;
+var ball;
 var clouds = [];
 var scoreboard;
 // Game Managers
@@ -66,30 +66,30 @@ function setupStats() {
 // Callback function that creates our Main Game Loop - refreshed 60 fps
 function gameLoop() {
     stats.begin(); // Begin measuring
-    ocean.update();
-    plane.update();
-    island.update();
+    field.update();
+    player.update();
+    ball.update();
     for (var cloud = 0; cloud < 3; cloud++) {
         clouds[cloud].update();
         collision.check(clouds[cloud]);
     }
-    collision.check(island);
+    collision.check(ball);
     scoreboard.update();
     stage.update();
     stats.end(); // end measuring
 }
 // Our Main Game Function
 function main() {
-    //add ocean object to stage
-    ocean = new objects.Ocean(assets.getResult("ocean"));
-    stage.addChild(ocean);
-    //add island object to stage
-    island = new objects.Island(assets.getResult("island"));
-    stage.addChild(island);
-    // add plane object to stage
-    plane = new objects.Plane(assets.getResult("plane"));
-    stage.addChild(plane);
-    // add 3 cloud objects to stage
+    //add field object to stage
+    field = new objects.Field(assets.getResult("field"));
+    stage.addChild(field);
+    //add ball object to stage
+    ball = new objects.Ball(assets.getResult("ball"));
+    stage.addChild(ball);
+    // add player object to stage
+    player = new objects.Player(assets.getResult("player"));
+    stage.addChild(player);
+    // add 3 opposition objects to stage
     for (var cloud = 0; cloud < 3; cloud++) {
         clouds[cloud] = new objects.Cloud(assets.getResult("cloud"));
         stage.addChild(clouds[cloud]);

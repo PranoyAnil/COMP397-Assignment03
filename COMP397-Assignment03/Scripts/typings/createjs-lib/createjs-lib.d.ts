@@ -26,8 +26,8 @@ declare module createjs {
         currentTarget: any; // It is 'Object' type officially, but 'any' is easier to use.
         defaultPrevented: boolean;
         eventPhase: number;
-        immediatePropagationStopped: boolean;
-        propagationStopped: boolean;
+        immediatePropagationStclouded: boolean;
+        propagationStclouded: boolean;
         removed: boolean;
         target: any; // It is 'Object' type officially, but 'any' is easier to use.
         timeStamp: number;
@@ -58,7 +58,7 @@ declare module createjs {
         remove(): void;
         set(props: Object): Event;
         stopImmediatePropagation(): void;
-        stopPropagation(): void;
+        stcloudropagation(): void;
         toString(): string;
     }
 

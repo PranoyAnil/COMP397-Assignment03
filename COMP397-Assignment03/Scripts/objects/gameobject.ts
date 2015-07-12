@@ -1,5 +1,5 @@
 ﻿module objects {
-    // Cloud Class ++++++++++++++++++++++++++++++++++++++
+    // Gameobject Class ++++++++++++++++++++++++++++++++++++++
     export class GameObject extends createjs.Bitmap {
         // PUBLIC PROPERTIES ++++++++++++++++++++++++++++
         public width: number;
