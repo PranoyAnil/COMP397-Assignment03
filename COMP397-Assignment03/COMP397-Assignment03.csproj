@@ -59,6 +59,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\audio\chant.wav" />
+    <Content Include="assets\audio\ovation.wav" />
+    <Content Include="assets\audio\whistle.wav" />
+    <Content Include="assets\audio\yes.wav" />
     <Content Include="assets\images\ball.png" />
     <Content Include="assets\images\field.gif" />
     <Content Include="assets\images\football.gif" />
@@ -66,9 +70,6 @@
     <Content Include="assets\images\player.png" />
     <Content Include="packages.config" />
     <Content Include="Scripts\utility\utility.js.map" />
-    <Content Include="assets\audio\hit.ogg" />
-    <Content Include="assets\audio\win.ogg" />
-    <Content Include="assets\audio\run.ogg" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -77,7 +78,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assets\audio\clicked.wav" />
     <Content Include="css\main.css" />
     <Content Include="index.html" />
     <Content Include="Scripts\lib\easeljs-0.8.0.min.js" />

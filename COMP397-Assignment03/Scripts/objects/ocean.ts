@@ -28,7 +28,7 @@
         private reset(): void {
             this.y = 0;
             //this.y = -960; // reset ocean off screen
-            this.x = 180;
+            this.x = 10;
         }
 
 

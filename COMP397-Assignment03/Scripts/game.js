@@ -21,9 +21,9 @@ var manifest = [
     { id: "plane", src: "assets/images/player.png" },
     { id: "island", src: "assets/images/ball.png" },
     { id: "cloud", src: "assets/images/opp.png" },
-    { id: "yay", src: "assets/audio/win.ogg" },
-    { id: "thunder", src: "assets/audio/hit.ogg" },
-    { id: "engine", src: "assets/audio/run.ogg" }
+    { id: "yay", src: "assets/audio/ovation.ogg" },
+    { id: "thunder", src: "assets/audio/whistle.ogg" },
+    { id: "engine", src: "assets/audio/chant.ogg" }
 ];
 // Game Variables
 var ocean;
