@@ -16,7 +16,6 @@
 /// <reference path="objects/scoreboard.ts" />
 
 
-
 /// <reference path="managers/collision.ts" />
 
 
@@ -31,9 +30,9 @@ var manifest = [
     { id: "player", src: "assets/images/player.png" },
     { id: "ball", src: "assets/images/ball.png" },
     { id: "cloud", src: "assets/images/opp.png" },
-    { id: "yay", src: "assets/audio/ovation.ogg" },
-    { id: "thunder", src: "assets/audio/whistle.ogg" },
-    { id: "engine", src: "assets/audio/chant.ogg" }
+    { id: "yay", src: "assets/audio/ovation.wav" },
+    { id: "foul", src: "assets/audio/whistle.wav" },
+    { id: "chant", src: "assets/audio/chant.wav" }
 ];
 
 
@@ -71,6 +70,8 @@ function init() {
     // calling main game function
     main();
 }
+
+   
 
 // function to setup stat counting
 function setupStats() {
@@ -128,7 +129,7 @@ function main() {
         clouds[cloud] = new objects.Cloud(assets.getResult("cloud"));
         stage.addChild(clouds[cloud]);
     }
-
+    
 
     //add scoreboard
     scoreboard = new objects.ScoreBoard();

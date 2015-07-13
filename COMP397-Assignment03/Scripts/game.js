@@ -21,9 +21,9 @@ var manifest = [
     { id: "player", src: "assets/images/player.png" },
     { id: "ball", src: "assets/images/ball.png" },
     { id: "cloud", src: "assets/images/opp.png" },
-    { id: "yay", src: "assets/audio/ovation.ogg" },
-    { id: "thunder", src: "assets/audio/whistle.ogg" },
-    { id: "engine", src: "assets/audio/chant.ogg" }
+    { id: "yay", src: "assets/audio/ovation.wav" },
+    { id: "foul", src: "assets/audio/whistle.wav" },
+    { id: "chant", src: "assets/audio/chant.wav" }
 ];
 // Game Variables
 var field;

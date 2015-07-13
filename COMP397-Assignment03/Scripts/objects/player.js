@@ -12,7 +12,7 @@ var objects;
         // CONSTRUCTOR ++++++++++++++++++++++++++++++++++
         function Player(imageString) {
             _super.call(this, imageString);
-            this.sound = "engine";
+            this.sound = "chant";
             //this.x = 30;
             this.x = 770;
             createjs.Sound.play(this.sound, { "loop": -1 });

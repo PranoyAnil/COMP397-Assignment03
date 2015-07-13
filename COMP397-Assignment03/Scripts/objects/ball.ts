@@ -25,6 +25,7 @@
         private reset(): void {
             this.y = Math.floor(Math.random() * 540); // start ball at random location
             this.x = -this.width; // start ball off stage
+            
         }
 
 

@@ -5,7 +5,7 @@
         constructor(imageString: string) {
             super(imageString);
 
-            this.sound = "engine";
+            this.sound = "chant";
 
             //this.x = 30;
             this.x = 770;
